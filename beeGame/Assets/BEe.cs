@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class BEe : MonoBehaviour {
+[RequireComponent(typeof(spin))]
+public class Bee : MonoBehaviour {
     public bool CanControl=true;
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,7 @@ public class BEe : MonoBehaviour {
             //we've hit OOB
             CanControl = false;
             GetComponent<Collider>().enabled = false;
+            GetComponent<spin>().enabled = true;
         }
     }
 }
