@@ -20,12 +20,13 @@ public class DDR : MonoBehaviour {
             delayLeft = delay;
             for(int i = 0; i < arrowSpawnPoints.Length; i++)
             {
-                if (Random.value > 0.9f)
+                if (Random.value > 0.7f)
                 {
 
                     var pos = arrowSpawnPoints[i].position;
                     pos.y = transform.position.y;
                     var arrow = Instantiate(Arrows[i], pos, Quaternion.identity);
+                    arrow.transform.parent = transform;
                     arrow.GetComponent<DDRArrow>().targettransform = arrowSpawnPoints[i];
                 }
             }

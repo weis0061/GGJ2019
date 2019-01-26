@@ -215,8 +215,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1376156153024500}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.66, y: 12.25, z: -10.78}
+  m_LocalRotation: {x: -0.026953973, y: -0.0036045897, z: 0.0018789696, w: 0.9996284}
+  m_LocalPosition: {x: -3.0573602, y: 3.8998818, z: 10.11251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4092299209486136}
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1ca0579c98d804eb5d3ddf59e61d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.3
+  delay: 0.75
   arrowSpawnPoints:
   - {fileID: 4092299209486136}
   - {fileID: 4812520184407238}
@@ -467,6 +467,6 @@ MonoBehaviour:
   - {fileID: 4698660992698912}
   Arrows:
   - {fileID: 1574643710329192, guid: 0f569dfe5163c904f9cb896dee2747d0, type: 2}
-  - {fileID: 1574643710329192, guid: 0f569dfe5163c904f9cb896dee2747d0, type: 2}
-  - {fileID: 1574643710329192, guid: 0f569dfe5163c904f9cb896dee2747d0, type: 2}
-  - {fileID: 1574643710329192, guid: 0f569dfe5163c904f9cb896dee2747d0, type: 2}
+  - {fileID: 1340454993452366, guid: 726979edf513eaa47ba37d39106fffad, type: 2}
+  - {fileID: 1858429518426736, guid: 53de5cbd6fcd410489858ae2d648ee18, type: 2}
+  - {fileID: 1637040261875126, guid: d4e0512d1edf3944b9e2affa2713d15e, type: 2}

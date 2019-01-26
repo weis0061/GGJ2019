@@ -7,7 +7,7 @@ using UnityEngine;
 public class DDRArrow : MonoBehaviour {
     public Transform targettransform;
     bool gotIt = false;
-    public float waitTimeMs = 300;
+    public float waitTime = 0.7F;
 	
 	// Update is called once per frame
 	void Update () {
@@ -31,8 +31,8 @@ public class DDRArrow : MonoBehaviour {
         }
         else
         {
-            waitTimeMs -= Time.deltaTime;
-            if (waitTimeMs <= 0)
+            waitTime -= Time.deltaTime;
+            if (waitTime <= 0)
             {
                 Destroy(gameObject);
             }
