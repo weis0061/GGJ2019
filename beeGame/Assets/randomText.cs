@@ -30,7 +30,8 @@ public class randomText : MonoBehaviour {
             "Surprise",
             "Libraries",
             "Quarter",
-            "Discover"
+            "Discover",
+            "Wrecked"
         };
         GetComponent<TextMesh>().text = textlist[Random.Range(0, textlist.Length - 1)];
 	}

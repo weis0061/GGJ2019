@@ -13,12 +13,14 @@ public class honeycomb : MonoBehaviour {
 	void Update () {
         if (gotem)
         {
-            var target = Camera.main.ViewportToWorldPoint(new Vector3(0.1F, 0.1F, 0));
+            var target = Camera.main.ViewportToWorldPoint(new Vector3(0.1F, 0.9F, transform.position.z));
             target.z = transform.position.z;
-            transform.Translate((transform.position - target) * Time.deltaTime * 10);
+            var vec = (transform.position - target);
+            vec.z = 0;
+            vec = vec * Time.deltaTime;
+            transform.position = transform.position - vec;
             if (Vector3.Distance(transform.position, target) < 1F)
             {
-                Debug.Log(Vector3.Distance(transform.position, target));
                 Destroy(gameObject);
             }
         }
@@ -28,7 +30,10 @@ public class honeycomb : MonoBehaviour {
         var bee = c.gameObject.GetComponent<BEe>();
         if (bee!=null)
         {
+            GetComponent<wavyMove>().enabled = false;
+            GetComponent<Move>().enabled = false;
             gotem = true;
+            BeeHp.beeHp[0]++;
             GetComponent<Collider>().enabled = false;
             GetComponentInChildren<TextMesh>().text = "";
         }

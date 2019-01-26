@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-    public class BeeHp
+    public static class BeeHp
     {
-        static int[] beeHp = new int[] {0,0};
+        public static int[] beeHp = new int[] {0,0};
     }
