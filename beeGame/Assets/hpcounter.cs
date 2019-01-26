@@ -11,8 +11,7 @@ public class hpcounter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         txt.text = BeeHp.beeHp[0].ToString();
-        var pos = Camera.main.ViewportToWorldPoint(new Vector3(0.1F, 0.9F, 0));
-        pos.z = transform.position.z;
+        var pos = Camera.main.ViewportToWorldPoint(new Vector3(0.1F, 0.9F, 5));
         transform.position = pos;
 	}
 }
