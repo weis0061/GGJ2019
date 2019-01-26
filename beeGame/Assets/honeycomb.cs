@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+[RequireComponent(typeof(AudioSource))]
 public class honeycomb : MonoBehaviour {
     bool gotem = false;
 	// Use this for initialization
@@ -36,6 +39,8 @@ public class honeycomb : MonoBehaviour {
             BeeHp.beeHp[0]++;
             GetComponent<Collider>().enabled = false;
             GetComponentInChildren<TextMesh>().text = "";
+            var sound = GetComponent<AudioSource>();
+            sound.Play(); 
         }
     }
 }

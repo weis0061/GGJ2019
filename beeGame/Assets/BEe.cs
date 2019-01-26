@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(spin))]
+[RequireComponent(typeof(AudioSource))]
 public class BEe : MonoBehaviour {
     public bool CanControl=true;
     public int BeeNum = 1;
@@ -31,6 +32,8 @@ public class BEe : MonoBehaviour {
             CanControl = false;
             GetComponent<Collider>().enabled = false;
             GetComponent<spin>().enabled = true;
+            var sound = GetComponent<AudioSource>();
+            sound.Play();
         }
     }
 
