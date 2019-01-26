@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraFollowBee : MonoBehaviour {
-
+public class Move : MonoBehaviour {
+    public Vector3 move;
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void FixedUpdate () {
+        transform.Translate(move * Time.deltaTime);
 	}
 }
