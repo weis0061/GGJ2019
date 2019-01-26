@@ -17,7 +17,7 @@ public class honeycomb : MonoBehaviour {
             target.z = transform.position.z;
             var vec = (transform.position - target);
             vec.z = 0;
-            vec = vec * Time.deltaTime;
+            vec = vec * Time.deltaTime * 2;
             transform.position = transform.position - vec;
             if (Vector3.Distance(transform.position, target) < 1F)
             {
