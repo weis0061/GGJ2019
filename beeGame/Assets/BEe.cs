@@ -18,8 +18,8 @@ public class BEe : MonoBehaviour {
         if (CanControl)
         {
             GetComponent<Rigidbody>().AddForce( 
-            new Vector3(Input.GetAxis("Horizontal"+BeeNum) * Time.deltaTime*200,
-                        Mathf.Max(Input.GetAxis("Vertical"+BeeNum) * Time.deltaTime*800,
+            new Vector3(Input.GetAxis("Horizontal"+BeeNum) * Time.deltaTime*300,
+                        Mathf.Max(Input.GetAxis("Vertical"+BeeNum) * Time.deltaTime*1000,
                         0),0));
         }
 	}
