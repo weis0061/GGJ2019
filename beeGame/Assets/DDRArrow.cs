@@ -6,22 +6,36 @@ using UnityEngine;
 [RequireComponent(typeof(ParticleSystem))]
 public class DDRArrow : MonoBehaviour {
     public Transform targettransform;
-	// Use this for initialization
-	void Start () {
-		
-	}
+    bool gotIt = false;
+    public float waitTimeMs = 300;
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("Fire1"))
+        if (!gotIt)
         {
-            GetComponent<ParticleSystem>().Emit(3);
-            Destroy(gameObject);
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (transform.position.y < targettransform.position.y + 1F)
+                {
+                    GetComponent<ParticleSystem>().Emit(3);
+                    GetComponentInChildren<MeshRenderer>().enabled = false;
+                    gotIt = true;
+                }
+            }
+            if (transform.position.y < targettransform.position.y - 1F)
+            {
+                BeeHp.beeHp[0]--;
+                Destroy(gameObject);
+            }
         }
-        if (transform.position.y < targettransform.position.y-1F)
+        else
         {
-            BeeHp.beeHp[0]--;
-            Destroy(gameObject);
+            waitTimeMs -= Time.deltaTime;
+            if (waitTimeMs <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
-	}
+    }
 }
