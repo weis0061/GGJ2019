@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targettransform: {fileID: 0}
-  waitTimeMs: 300
+  waitTime: 0.7
+  inputBinding: ddrdown
 --- !u!114 &114850704001451664
 MonoBehaviour:
   m_ObjectHideFlags: 1

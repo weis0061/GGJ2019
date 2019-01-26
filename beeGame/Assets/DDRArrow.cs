@@ -8,13 +8,14 @@ public class DDRArrow : MonoBehaviour {
     public Transform targettransform;
     bool gotIt = false;
     public float waitTime = 0.7F;
+    public string inputBinding = "";
 	
 	// Update is called once per frame
 	void Update () {
         if (!gotIt)
         {
 
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown(inputBinding) || Input.GetAxis(inputBinding)>0.01F)
             {
                 if (transform.position.y < targettransform.position.y + 1F)
                 {
