@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class EndFirstPhase : MonoBehaviour {
     public GameObject[] disableOnPhaseExit;
+    public GameObject[] enableOnPhaseExit;
     public Behaviour[] disableCompOnPhaseExit;
     Collider collider;
 	// Use this for initialization
@@ -24,6 +25,10 @@ public class EndFirstPhase : MonoBehaviour {
             foreach (var obj in disableCompOnPhaseExit)
             {
                 obj.enabled = false;
+            }
+            foreach (var obj in enableOnPhaseExit)
+            {
+                obj.SetActive(true);
             }
         }
     }
