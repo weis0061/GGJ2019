@@ -30,7 +30,7 @@ public class spam : MonoBehaviour {
         if (spamSomething)
         {
             spamSomething = false;
-            var go = SpamThese[Mathf.RoundToInt(Random.Range(0, SpamThese.Length))];
+            var go = SpamThese[Mathf.RoundToInt(Random.Range(0, SpamThese.Length-1))];
             var position = (FromArea.position - ToArea.position) * Random.value + ToArea.position;
             Instantiate(go, position, Quaternion.identity);
         }
