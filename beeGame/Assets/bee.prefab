@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 135058442783915174}
   - component: {fileID: 54774760446786264}
   - component: {fileID: 114273567036732364}
+  - component: {fileID: 114411806901176198}
   m_Layer: 0
   m_Name: bee
   m_TagString: Untagged
@@ -37,8 +38,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1038841281095610}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.948, y: 3.424, z: -8.93}
+  m_LocalRotation: {x: -0.026953973, y: -0.0036045897, z: 0.0018789696, w: 0.9996284}
+  m_LocalPosition: {x: -1, y: -0.46, z: 4.82}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,6 +113,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3a48dc5da57ada4d873e2616cde6f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanControl: 1
+  BeeNum: 1
+--- !u!114 &114411806901176198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038841281095610}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4bd5a3c74b1d841baf2d62b52b61b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spin: {x: 0, y: 0, z: 500}
 --- !u!135 &135058442783915174
 SphereCollider:
   m_ObjectHideFlags: 1

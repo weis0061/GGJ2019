@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(spin))]
 public class Bee : MonoBehaviour {
     public bool CanControl=true;
+    public int BeeNum = 1;
 	// Use this for initialization
 	void Start () {
         
@@ -16,8 +17,8 @@ public class Bee : MonoBehaviour {
         if (CanControl)
         {
             GetComponent<Rigidbody>().AddForce( 
-            new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime*200,
-                        Mathf.Max(Input.GetAxis("Vertical") * Time.deltaTime*800,
+            new Vector3(Input.GetAxis("Horizontal"+BeeNum) * Time.deltaTime*200,
+                        Mathf.Max(Input.GetAxis("Vertical"+BeeNum) * Time.deltaTime*800,
                         0),0));
         }
 	}
@@ -31,5 +32,10 @@ public class Bee : MonoBehaviour {
             GetComponent<Collider>().enabled = false;
             GetComponent<spin>().enabled = true;
         }
+    }
+
+    public void addHP()
+    {
+
     }
 }
