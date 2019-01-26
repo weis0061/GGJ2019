@@ -11,6 +11,7 @@ ModelImporter:
     100010: Sphere001
     100012: Sphere002
     100014: Sphere003
+    100016: Cone002
     400000: //RootNode
     400002: Cone001
     400004: Plane001
@@ -19,6 +20,7 @@ ModelImporter:
     400010: Sphere001
     400012: Sphere002
     400014: Sphere003
+    400016: Cone002
     2100000: No Name
     2300000: Cone001
     2300002: Plane001
@@ -27,6 +29,7 @@ ModelImporter:
     2300008: Sphere001
     2300010: Sphere002
     2300012: Sphere003
+    2300014: Cone002
     3300000: Cone001
     3300002: Plane001
     3300004: Plane002
@@ -34,6 +37,7 @@ ModelImporter:
     3300008: Sphere001
     3300010: Sphere002
     3300012: Sphere003
+    3300014: Cone002
     4300000: Sphere001
     4300002: Sphere002
     4300004: Sphere003
@@ -41,6 +45,7 @@ ModelImporter:
     4300008: Plane002
     4300010: Plane003
     4300012: Cone001
+    4300014: Cone002
   externalObjects: {}
   materials:
     importMaterials: 1
