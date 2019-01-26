@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class BEe : MonoBehaviour {
-
+    public bool CanControl=true;
 	// Use this for initialization
 	void Start () {
         
@@ -12,11 +12,22 @@ public class BEe : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        GetComponent<Rigidbody>().AddForce( 
+        if (CanControl)
+        {
+            GetComponent<Rigidbody>().AddForce( 
             new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime*200,
                         Mathf.Max(Input.GetAxis("Vertical") * Time.deltaTime*800,
                         0),0));
-        Debug.Log(GetComponent<Rigidbody>().velocity);
-
+        }
 	}
+
+    void OnCollisionEnter(Collision c)
+    {
+        if (c.gameObject.GetComponent<Outofbounds>() != null)
+        {
+            //we've hit OOB
+            CanControl = false;
+            GetComponent<Collider>().enabled = false;
+        }
+    }
 }
