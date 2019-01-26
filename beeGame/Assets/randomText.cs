@@ -15,7 +15,7 @@ public class randomText : MonoBehaviour {
             "Dubious",
             "Yet",
             "Yeet",
-            "Crawl,",
+            "Crawl",
             "Earth",
             "Fever",
             "Useful",
