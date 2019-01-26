@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targettransform: {fileID: 0}
   waitTime: 0.7
+  inputBinding: ddrleft
 --- !u!198 &198614862149143348
 ParticleSystem:
   m_ObjectHideFlags: 1

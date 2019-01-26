@@ -8,10 +8,7 @@ using UnityEngine;
 public class BEe : MonoBehaviour {
     public bool CanControl=true;
     public int BeeNum = 1;
-	// Use this for initialization
-	void Start () {
-        
-	}
+    float timeBeforeRestart = 1F;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -21,6 +18,15 @@ public class BEe : MonoBehaviour {
             new Vector3(Input.GetAxis("Horizontal"+BeeNum) * Time.deltaTime*300,
                         Mathf.Max(Input.GetAxis("Vertical"+BeeNum) * Time.deltaTime*1000,
                         0),0));
+        }
+        else
+        {
+            timeBeforeRestart -= Time.deltaTime;
+            if (timeBeforeRestart <= 0)
+            {
+                Application.LoadLevel("SampleScene");
+                BeeHp.beeHp[0] = 0;
+            }
         }
 	}
 
@@ -34,6 +40,7 @@ public class BEe : MonoBehaviour {
             GetComponent<spin>().enabled = true;
             var sound = GetComponent<AudioSource>();
             sound.Play();
+            
         }
     }
 }
