@@ -38,6 +38,7 @@ public class honeycomb : MonoBehaviour {
             BeeHp.beeHp[0]++;
             GetComponent<Collider>().enabled = false;
             GetComponentInChildren<TextMesh>().text = "";
+            transform.parent = Camera.main.transform;
             var sound = GetComponent<AudioSource>();
             sound.Play(); 
         }
