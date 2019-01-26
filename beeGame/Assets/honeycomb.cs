@@ -25,7 +25,7 @@ public class honeycomb : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider c)
     {
-        var bee = c.gameObject.GetComponent<Bee>();
+        var bee = c.gameObject.GetComponent<BEe>();
         if (bee!=null)
         {
             gotem = true;

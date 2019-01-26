@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(spin))]
-public class Bee : MonoBehaviour {
+public class BEe : MonoBehaviour {
     public bool CanControl=true;
     public int BeeNum = 1;
 	// Use this for initialization
