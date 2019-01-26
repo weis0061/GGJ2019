@@ -4,22 +4,13 @@ using UnityEngine;
 
 public class restart : MonoBehaviour {
 
-
-   
-
-
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update ()
     {
         if (Input.GetKeyDown(KeyCode.R))
-            Application.LoadLevel(0);
-
-       
+        {
+            Application.LoadLevel("SampleScene");
+            BeeHp.beeHp[0] = 0;
+        }
     }
 }
