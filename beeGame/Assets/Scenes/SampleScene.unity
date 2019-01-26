@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5467398ea2ce2c544b561726fc1afdd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 4
+  intensity: 3
   frequency: 3
 --- !u!114 &166943828
 MonoBehaviour:
@@ -4405,7 +4405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5467398ea2ce2c544b561726fc1afdd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 4
+  intensity: 3
   frequency: 2
 --- !u!114 &1592967895
 MonoBehaviour:
