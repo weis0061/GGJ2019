@@ -12,8 +12,10 @@ public class BEe : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        GetComponent<Rigidbody>().AddForce( new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime*200,
-            Input.GetAxis("Vertical") * Time.deltaTime*800,0));
+        GetComponent<Rigidbody>().AddForce( 
+            new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime*200,
+                        Mathf.Max(Input.GetAxis("Vertical") * Time.deltaTime*800,
+                        0),0));
         Debug.Log(GetComponent<Rigidbody>().velocity);
 
 	}
