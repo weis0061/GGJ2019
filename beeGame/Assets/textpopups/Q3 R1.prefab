@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4530794417912746}
   - component: {fileID: 33263087360114094}
   - component: {fileID: 23927086649391488}
+  - component: {fileID: 65727382870347646}
+  - component: {fileID: 114369849294380130}
   m_Layer: 0
   m_Name: Q3 R1
   m_TagString: Untagged
@@ -149,6 +151,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1488234864480566}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65727382870347646
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488234864480566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 6.1232336e-17}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!102 &102415280063608014
 TextMesh:
   serializedVersion: 3
@@ -170,3 +184,16 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &114369849294380130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488234864480566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e21077a2f2c4448b21a27881dac21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  datingSimManager: {fileID: 0}
+  correctAnswer: 0

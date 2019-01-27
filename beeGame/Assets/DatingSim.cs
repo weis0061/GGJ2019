@@ -6,25 +6,25 @@ using UnityEngine;
 public class DatingSim : MonoBehaviour
 {
     public GameObject[] questions;
-    public GameObject[] correctAnswers;
-    public GameObject[][] incorrectAnswers;
+    [System.Serializable]
+    public class qandA
+    {
+        public GameObject[] answers;
+    }
+    public qandA[] answers;
     public Transform[] answerLocations;
     public Transform questionLocation;
 
     List<GameObject> thisQuestion=new List<GameObject>();
-    GameObject spawnedCorrectAnswer;
     int questionNum = 0;
 
 	// Use this for initialization
 	void Start ()
     {
-        foreach (var r in correctAnswers.Select(x => x.GetComponent<DatingSimResponse>()))
+        for (int i = 0; i < questions.Length;i++)
         {
-            r.datingSimManager = this;
-        }
-        foreach (var answerList in incorrectAnswers)
-        {
-            foreach (var r in answerList.Select(x => x.GetComponent<DatingSimResponse>()))
+
+            foreach (var r in answers[i].answers.Select(x => x.GetComponent<DatingSimResponse>()))
             {
                 r.datingSimManager = this;
             }
@@ -34,25 +34,13 @@ public class DatingSim : MonoBehaviour
 
     public void selectOption(DatingSimResponse r) {
         //if the correct answer was picked
-        if (spawnedCorrectAnswer==r)
-        {
-            questionNum++;
-            ShowQuestion();
-        }
-        else
-        {
-            mistake();
-        }
+        questionNum++;
+        ShowQuestion();
     }
 
     void ShowQuestion()
     {
-        //save the right answer
-        spawnedCorrectAnswer= Instantiate(correctAnswers[questionNum]);
-
-        //add all answers to question currently active
-        thisQuestion.Add(spawnedCorrectAnswer);
-        foreach(var a in incorrectAnswers[questionNum])
+        foreach(var a in answers[questionNum].answers)
         {
             thisQuestion.Add(Instantiate(a));
         }
@@ -66,7 +54,7 @@ public class DatingSim : MonoBehaviour
         }
     }
 
-    void mistake()
+    public void mistake()
     {
         //TODO
     }
