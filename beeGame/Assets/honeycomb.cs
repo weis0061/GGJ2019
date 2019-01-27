@@ -18,7 +18,7 @@ public class honeycomb : MonoBehaviour {
         {
             var target = Camera.main.ViewportToWorldPoint(new Vector3(0.1F, 0.9F, 5F));
             var vec = (target- transform.position);
-            vec = vec * Time.deltaTime * 2;
+            vec = vec * Time.deltaTime * 8;
             Debug.DrawLine(transform.position, target);
             transform.position = transform.position + vec;
             if (Vector3.Distance(transform.position, target) < 0.3F)

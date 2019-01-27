@@ -19,19 +19,23 @@ public class cycleThroughTextBoxes : MonoBehaviour {
         timeTillNextBox -= Time.deltaTime;
         if (timeTillNextBox <= 0)
         {
-            timeTillNextBox = 3f + Random.value;
-            var pos = new Vector3(
-                Random.Range(boxTopLeft.position.x,boxTopRight.position.x),
-                Random.Range(boxTopLeft.position.y,boxTopRight.position.y),
-                Random.Range(boxTopLeft.position.z,boxTopRight.position.z)
-                );
-            if(lastCreatedbox != null)
-                Destroy(lastCreatedbox);
-            lastCreatedbox = Instantiate(boxes[boxIndex],pos,Quaternion.identity);
-
-            boxIndex++;
-            if (boxIndex >= boxes.Length)
+            if (boxIndex < boxes.Length)
             {
+                timeTillNextBox = 3f + Random.value;
+                var pos = new Vector3(
+                    Random.Range(boxTopLeft.position.x, boxTopRight.position.x),
+                    Random.Range(boxTopLeft.position.y, boxTopRight.position.y),
+                    Random.Range(boxTopLeft.position.z, boxTopRight.position.z)
+                    );
+                if (lastCreatedbox != null)
+                    Destroy(lastCreatedbox);
+                lastCreatedbox = Instantiate(boxes[boxIndex], pos, Quaternion.identity);
+
+                boxIndex++;
+            }
+            else
+            {
+                Destroy(lastCreatedbox);
                 foreach (var obj in activateAfterDDRComplete)
                 {
                     obj.SetActive(true);

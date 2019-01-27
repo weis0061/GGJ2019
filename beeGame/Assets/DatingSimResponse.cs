@@ -9,7 +9,6 @@ public class DatingSimResponse : MonoBehaviour {
 
     void OnMouseUpAsButton()
     {
-        Debug.Log(correctAnswer);
         if(correctAnswer)
         datingSimManager.selectOption(this);
         else
