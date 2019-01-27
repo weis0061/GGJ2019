@@ -36,6 +36,9 @@ public class DatingSim : MonoBehaviour
     public Material QBAngry;
     public Material QBBlush;
 
+    public AudioSource correctSound;
+    public AudioSource inCorrectSound;
+
     // Use this for initialization
     void Start ()
     {
@@ -51,6 +54,8 @@ public class DatingSim : MonoBehaviour
 
     public void selectOption(DatingSimResponse r) {
         QB.material = QBBlush;
+
+        correctSound.Play();
         //if the correct answer was picked
         questionNum++;
         if (questionNum >= questions.Length)
@@ -92,6 +97,7 @@ public class DatingSim : MonoBehaviour
 
     public void mistake()
     {
+        inCorrectSound.Play();
         QB.material = QBAngry;
         shake.shakeTheCamera();
         BeeHp.beeHp[0]--;

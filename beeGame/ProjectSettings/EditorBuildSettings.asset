@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/secretroom.unity
     guid: d0b59b21aaabf3043a43cdf44fb7135c
+  - enabled: 1
+    path: Assets/Scenes/datingsim.unity
+    guid: f64f7ae01f5845141b33dabd03898985
   m_configObjects: {}
