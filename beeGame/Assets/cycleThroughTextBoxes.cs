@@ -12,18 +12,21 @@ public class cycleThroughTextBoxes : MonoBehaviour {
     public Behaviour[] deactivateAfterDDRCompleteComp;
     public Transform boxTopLeft;
     public Transform boxTopRight;
+    public GameObject lastCreatedbox;
     // Update is called once per frame
     void Update () {
         timeTillNextBox -= Time.deltaTime;
         if (timeTillNextBox <= 0)
         {
-            timeTillNextBox = 1f + Random.value;
+            timeTillNextBox = 3f + Random.value;
             var pos = new Vector3(
                 Random.Range(boxTopLeft.position.x,boxTopRight.position.x),
                 Random.Range(boxTopLeft.position.y,boxTopRight.position.y),
                 Random.Range(boxTopLeft.position.z,boxTopRight.position.z)
                 );
-            Instantiate(boxes[boxIndex],pos,Quaternion.identity);
+            if(lastCreatedbox != null)
+                Destroy(lastCreatedbox);
+            lastCreatedbox = Instantiate(boxes[boxIndex],pos,Quaternion.identity);
 
             boxIndex++;
             if (boxIndex >= boxes.Length)
