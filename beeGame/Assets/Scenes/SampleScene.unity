@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 114679506}
   - component: {fileID: 114679505}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Queen Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,7 +358,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 991af7b1e8691bb4e8fb3fe14a11c535, type: 2}
+  - {fileID: 2100000, guid: 0cf4ee1742b5f0d4395e30ca129d12be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -469,8 +469,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 136775260}
-  m_LocalRotation: {x: 0.026953973, y: 0.0036045897, z: -0.0018789696, w: 0.9996284}
-  m_LocalPosition: {x: 143.4, y: 8.35, z: -19.83}
+  m_LocalRotation: {x: 0.026941692, y: 0.0036955103, z: 0.0014937357, w: 0.99962914}
+  m_LocalPosition: {x: 51.4, y: 8.35, z: -19.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 283963214}
@@ -481,7 +481,7 @@ Transform:
   - {fileID: 2120233552}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 3.0900002, y: 0.40800002, z: -0.20400001}
+  m_LocalEulerAnglesHint: {x: 3.0870001, y: 0.42900002, z: 0.18300001}
 --- !u!114 &136775264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,8 +1136,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 293419777}
   m_LocalRotation: {x: 0.00000205636, y: 0.70711005, z: -0.7071036, w: -0.0000020712612}
-  m_LocalPosition: {x: -113.46951, y: 4.500721, z: -49.44772}
-  m_LocalScale: {x: 7.991316, y: 1.866707, z: 1.7273402}
+  m_LocalPosition: {x: -113.94, y: 4.500721, z: -49.35}
+  m_LocalScale: {x: 7.991316, y: 1.866707, z: 1.723697}
   m_Children: []
   m_Father: {fileID: 1746167466}
   m_RootOrder: 0
@@ -3260,7 +3260,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121572098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 1.22, z: -0.12}
+  m_LocalPosition: {x: -0.11, y: 1.95, z: -0.12}
   m_LocalScale: {x: 0.95971805, y: 0.95971805, z: 0.95971805}
   m_Children: []
   m_Father: {fileID: 883398778}
@@ -5768,6 +5768,7 @@ MonoBehaviour:
   deactivateAfterDDRCompleteComp: []
   boxTopLeft: {fileID: 1813024464}
   boxTopRight: {fileID: 603700389}
+  lastCreatedbox: {fileID: 0}
 --- !u!1 &1848069085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1518613063260758, guid: 5cb0228d9aa12f44fbca8881a48efb11,
