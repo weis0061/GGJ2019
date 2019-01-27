@@ -11,7 +11,6 @@ public class randomText : MonoBehaviour {
         {
             "Convoluted",
             "They're",
-            "Anthophila",
             "Dubious",
             "Yet",
             "Yeet",
@@ -31,7 +30,26 @@ public class randomText : MonoBehaviour {
             "Libraries",
             "Quarter",
             "Discover",
-            "Wrecked"
+            "Wrecked",
+            "Corporeal",
+            "Onomatopeia",
+            "Plethora",
+            "Plebian",
+            "Arthropod",
+            "Abibliophelia",
+            "Cornucopia",
+            "Balderdash",
+            "Bumfuzzle",
+            "Cattywumpas",
+            "Flibbertigibbet",
+            "Sialoquent",
+            "Turtle",
+            "Orange",
+            "Wombat",
+            "D'oh",
+            "Debauchery",
+            "Ramshackle",
+            "Skedaddle"
         };
         GetComponent<TextMesh>().text = textlist[Random.Range(0, textlist.Length - 1)];
 	}
