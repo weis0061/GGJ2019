@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class secretroom : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+
+    void OnMouseUpAsButton()
+    {
+
+        Application.LoadLevel("secretroom");
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
