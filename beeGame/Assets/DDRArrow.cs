@@ -29,6 +29,7 @@ public class DDRArrow : MonoBehaviour {
                 BeeHp.beeHp[0]--;
                 if (BeeHp.beeHp[0] <= 0)
                 {
+                    BeeHp.beeHp[0] = 0;
                     Application.LoadLevel("SampleScene");
                 }
                 Destroy(gameObject);

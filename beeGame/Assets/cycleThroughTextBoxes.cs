@@ -44,6 +44,7 @@ public class cycleThroughTextBoxes : MonoBehaviour {
                 {
                     obj.enabled = (false);
                 }
+                Destroy(gameObject);
             }
         }
 	}
