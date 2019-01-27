@@ -27,6 +27,10 @@ public class DDRArrow : MonoBehaviour {
             if (transform.position.y < targettransform.position.y - 1F)
             {
                 BeeHp.beeHp[0]--;
+                if (BeeHp.beeHp[0] <= 0)
+                {
+                    Application.LoadLevel("SampleScene");
+                }
                 Destroy(gameObject);
             }
         }
