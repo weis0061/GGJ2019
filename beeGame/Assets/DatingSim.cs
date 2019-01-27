@@ -28,6 +28,7 @@ public class DatingSim : MonoBehaviour
     int interQuestionNum = 0;
     bool currentDialogIsQuestion = false;
     interQuestion thisDialog;
+    GameObject currentDialogObj;
 
 
     public MeshRenderer QB;
@@ -114,6 +115,7 @@ public class DatingSim : MonoBehaviour
 
             thisDialog = interQuestions[interQuestionNum];
             var thisinter = Instantiate( thisDialog.textbox);
+            currentDialogObj = thisinter;
             thisinter.transform.position = questionLocation.position;
             QB.material = thisDialog.showThisMaterial;
             interQuestionNum++;
@@ -126,12 +128,13 @@ public class DatingSim : MonoBehaviour
         {
             if (thisDialog.ShouldPromptNextQuestion)
             {
+                Destroy(currentDialogObj);
                 thisDialog = null;
-                Destroy(thisDialog.textbox);
                 ShowQuestion();
             }
             else
             {
+                Destroy(currentDialogObj);
                 showInterQuestion();
             }
         }

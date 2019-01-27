@@ -9,6 +9,7 @@ public class shake : MonoBehaviour {
     public static void shakeTheCamera(float duration=0.3f)
     {
         TimeLeft = duration;
+        singleton.GetComponent<AudioSource>().Play();
     }
 
     Camera cam;
