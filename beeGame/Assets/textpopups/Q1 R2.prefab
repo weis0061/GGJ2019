@@ -196,4 +196,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   datingSimManager: {fileID: 0}
-  correctAnswer: 0
+  correctAnswer: 1

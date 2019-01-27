@@ -40,18 +40,31 @@ public class DatingSim : MonoBehaviour
 
     void ShowQuestion()
     {
-        foreach(var a in answers[questionNum].answers)
+        foreach(var q in thisQuestion)
+        {
+            Destroy(q);
+        }
+        thisQuestion.Clear();
+        foreach (var a in answers[questionNum].answers)
         {
             thisQuestion.Add(Instantiate(a));
         }
         //randomize it
         thisQuestion = thisQuestion.OrderBy(x => Random.value).ToList();
 
+
         //add to location on screen
         for(int i = 0; i < answerLocations.Length; i++)
         {
             thisQuestion[i].transform.position = answerLocations[i].position;
+            thisQuestion[i].transform.rotation = answerLocations[i].rotation;
+            thisQuestion[i].transform.localScale = answerLocations[i].localScale;
         }
+        var obj = Instantiate(questions[questionNum]);
+        obj.transform.position = questionLocation.position;
+        obj.transform.rotation = questionLocation.rotation;
+        obj.transform.localScale = questionLocation.localScale;
+        thisQuestion.Add(obj);
     }
 
     public void mistake()

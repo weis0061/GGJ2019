@@ -12,7 +12,8 @@ public class cycleThroughTextBoxes : MonoBehaviour {
     public Behaviour[] deactivateAfterDDRCompleteComp;
     public Transform boxTopLeft;
     public Transform boxTopRight;
-    public GameObject lastCreatedbox;
+    GameObject lastCreatedbox;
+
     // Update is called once per frame
     void Update () {
         timeTillNextBox -= Time.deltaTime;
